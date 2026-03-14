@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1440" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE6EE" />
+      <stop offset="1" stop-color="#F7DEE4" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)" />
+  <rect x="112" y="78" width="1216" height="744" fill="#FFF9FA" stroke="#A86767" stroke-width="6"/>
+  <rect x="112" y="78" width="1216" height="60" fill="#FFD1DE" stroke="#A86767" stroke-width="6"/>
+  <text x="140" y="116" fill="#3F1F1F" font-size="36" font-family="monospace">INDEX.PAGE</text>
+
+  <rect x="140" y="170" width="1160" height="56" fill="#FFF1F4" stroke="#DCA2A2" stroke-width="4"/>
+  <rect x="164" y="186" width="120" height="26" fill="#FFFFFF" stroke="#A86767" stroke-width="3"/>
+  <rect x="304" y="186" width="120" height="26" fill="#FFFFFF" stroke="#A86767" stroke-width="3"/>
+  <rect x="444" y="186" width="120" height="26" fill="#FFFFFF" stroke="#A86767" stroke-width="3"/>
+  <rect x="584" y="186" width="120" height="26" fill="#FFFFFF" stroke="#A86767" stroke-width="3"/>
+  <rect x="724" y="186" width="120" height="26" fill="#FFFFFF" stroke="#A86767" stroke-width="3"/>
+
+  <rect x="140" y="254" width="750" height="270" fill="#FFF" stroke="#DCA2A2" stroke-width="4"/>
+  <rect x="914" y="254" width="386" height="270" fill="#FFDCE7" stroke="#DCA2A2" stroke-width="4"/>
+  <text x="174" y="316" fill="#3F1F1F" font-size="66" font-family="monospace">INDEX</text>
+  <text x="174" y="360" fill="#6B4444" font-size="24" font-family="sans-serif">Sharyap Portfolio Replica</text>
+  <rect x="174" y="390" width="220" height="48" rx="2" fill="#ff7892" stroke="#A86767" stroke-width="3"/>
+  <text x="198" y="422" fill="white" font-size="24" font-family="monospace">OPEN SECTION</text>
+
+  <rect x="140" y="548" width="372" height="220" fill="#FFF" stroke="#DCA2A2" stroke-width="4"/>
+  <rect x="534" y="548" width="372" height="220" fill="#FFF" stroke="#DCA2A2" stroke-width="4"/>
+  <rect x="928" y="548" width="372" height="220" fill="#FFF" stroke="#DCA2A2" stroke-width="4"/>
+
+  <rect x="112" y="780" width="1216" height="42" fill="#FFE7EF" stroke="#DCA2A2" stroke-width="4"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1916" height="964" viewBox="0 0 1916 964" fill="none">
+  <rect width="1916" height="964" fill="#121416"/>
+  <rect y="726" width="1916" height="6" fill="#B7F8FF"/>
+  <rect y="732" width="1916" height="232" fill="#1B4C78"/>
+  <rect x="558" y="196" width="798" height="612" rx="10" fill="#0D1F3B" stroke="#E5E7EB" stroke-width="2"/>
+  <rect x="478" y="290" width="798" height="612" rx="10" fill="#0D1F3B" stroke="#E5E7EB" stroke-width="2"/>
+  <rect x="478" y="290" width="798" height="54" rx="10" fill="#111214"/>
+  <text x="504" y="324" fill="#F3F4F6" font-family="Fira Code, monospace" font-size="34">about</text>
+  <text x="1216" y="324" fill="#F3F4F6" font-family="Fira Code, monospace" font-size="34">[x]</text>
+</svg>
