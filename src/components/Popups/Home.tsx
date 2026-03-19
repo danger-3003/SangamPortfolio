@@ -67,18 +67,18 @@ function HomePopUp({ handleClick }: HomePopUp) {
             fun stuff
           </p>
         </div>
-        <div className="bg-window-bg w-[90vw] md:w-130 h-[50vh] max-h-240 md:h-[60vh] md:max-h-120 lg:w-180 lg:h-150 border-2 border-window-border rounded-xl shadow-flat overflow-hidden flex flex-col">
+        <div className="bg-window-bg w-[90vw] md:w-130 h-[50vh] max-h-240 md:h-[60vh] md:max-h-120 lg:w-180 xl:w-200 lg:h-150 border-2 border-window-border rounded-xl shadow-flat overflow-hidden flex flex-col">
           <div
             className={`window-header text-white flex justify-between items-center bg-window-header px-6 py-2 rounded-t-[11px] border-b-2 border-window-border`}
           >
             <span className="text-lg">Home</span>
           </div>
-          <div className='flex-1 min-h-0 overflow-y-auto'>
+          <div className='flex-1 min-h-0 overflow-y-auto scrollbar-hide'>
             <div className="p-6 flex flex-col gap-5">
               <div className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
                 hi! <span className='text-amber-500 dark:text-cyan-100 font-bold'>i&apos;m Sangam</span>
               </div>
-              {/* <div className='flex items-center justify-center'>
+              <div className='hidden lg:flex items-center justify-center'>
                 <div className='flex items-start flex-wrap lg:items-center justify-center gap-2 w-max'>
                   {
                     HomePageData?.map((item, key) => {
@@ -98,8 +98,8 @@ function HomePopUp({ handleClick }: HomePopUp) {
                     })
                   }
                 </div>
-              </div> */}
-              <div className='flex items-center justify-center'>
+              </div>
+              <div className='flex items-center justify-center lg:hidden'>
                 <div className="w-full overflow-x-auto scrollbar-hide"
                   ref={scrollRef}
                   onMouseDown={handleMouseDown}
@@ -137,88 +137,88 @@ function HomePopUp({ handleClick }: HomePopUp) {
               </div>
             </div>
           </div>
-        </div>
-        <div className='flex items-center justify-center flex-wrap gap-5 mt-10 md:hidden'>
-          <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
-            <button
-              className="size-12 flex items-center justify-center flex-col"
-              onClick={() => handleClick("work")}
-            >
-              <img
-                draggable={false}
-                className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
-                src="/assets/original/images/icon_work.webp"
-              />
+          <div className='flex items-center justify-center flex-wrap gap-5 mb-6 md:hidden'>
+            <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
+              <button
+                className="size-12 flex items-center justify-center flex-col"
+                onClick={() => handleClick("work")}
+              >
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
+                  src="/assets/original/images/icon_work.webp"
+                />
 
-              <img
-                draggable={false}
-                className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
-                src="/assets/original/images/icon_work_dark.webp"
-              />
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
+                  src="/assets/original/images/icon_work_dark.webp"
+                />
 
-              <div className="label">work</div>
-            </button>
-          </SoundHover>
-          <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
-            <button
-              className="size-12 flex items-center justify-center flex-col"
-              onClick={() => handleClick("about")}
-            >
-              <img
-                draggable={false}
-                className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
-                src="/assets/original/images/icon_about.webp"
-              />
+                <div className="label">work</div>
+              </button>
+            </SoundHover>
+            <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
+              <button
+                className="size-12 flex items-center justify-center flex-col"
+                onClick={() => handleClick("about")}
+              >
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
+                  src="/assets/original/images/icon_about.webp"
+                />
 
-              <img
-                draggable={false}
-                className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
-                src="/assets/original/images/icon_about_dark.webp"
-              />
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
+                  src="/assets/original/images/icon_about_dark.webp"
+                />
 
-              <div className="label">about</div>
-            </button>
-          </SoundHover>
-          <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
-            <button
-              className="size-12 flex items-center justify-center flex-col"
-              onClick={() => handleClick("faq")}
-            >
-              <img
-                draggable={false}
-                className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
-                src="/assets/original/images/icon_faq.webp"
-              />
+                <div className="label">about</div>
+              </button>
+            </SoundHover>
+            <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
+              <button
+                className="size-12 flex items-center justify-center flex-col"
+                onClick={() => handleClick("faq")}
+              >
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
+                  src="/assets/original/images/icon_faq.webp"
+                />
 
-              <img
-                draggable={false}
-                className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
-                src="/assets/original/images/icon_faq_dark.webp"
-              />
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
+                  src="/assets/original/images/icon_faq_dark.webp"
+                />
 
-              <div className="label">faq</div>
-            </button>
-          </SoundHover>
-          <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
-            <button
-              className="size-12 flex items-center justify-center flex-col"
-              onClick={() => handleClick("contact")}
-            >
-              <img
-                draggable={false}
-                className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
-                src="/assets/original/images/icon_contact.webp"
-              />
+                <div className="label">faq</div>
+              </button>
+            </SoundHover>
+            <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
+              <button
+                className="size-12 flex items-center justify-center flex-col"
+                onClick={() => handleClick("contact")}
+              >
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
+                  src="/assets/original/images/icon_contact.webp"
+                />
 
-              <img
-                draggable={false}
-                className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
-                src="/assets/original/images/icon_contact_dark.webp"
-              />
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
+                  src="/assets/original/images/icon_contact_dark.webp"
+                />
 
-              <div className="label">contact</div>
-            </button>
-          </SoundHover>
+                <div className="label">contact</div>
+              </button>
+            </SoundHover>
+          </div>
         </div>
       </div>
     </>

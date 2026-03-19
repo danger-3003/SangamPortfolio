@@ -11,15 +11,16 @@ import SoundHover from "../PlaySound/HoverSound"
 import About from "../Popups/About"
 import { themeControls } from "@/store/theme-store"
 import Work from "../Popups/Work"
+import FAQSection from "../Popups/FAQ"
 
 export type WindowName = "about" | "work" | "faq" | "contact"
 type WindowSize = { width: number; height: number }
 
 const WINDOW_SIZES: Record<WindowName, WindowSize> = {
-  about: { width: 956, height: 400 },
-  work: { width: 956, height: 400 },
-  faq: { width: 956, height: 400 },
-  contact: { width: 956, height: 400 },
+  about: { width: 800, height: 500 },
+  work: { width: 800, height: 500 },
+  faq: { width: 800, height: 500 },
+  contact: { width: 800, height: 500 },
 }
 
 export default function DesktopShell() {
@@ -103,7 +104,7 @@ export default function DesktopShell() {
   return (
     <>
       <main className="relative min-h-screen">
-        <HomePopUp 
+        <HomePopUp
           handleClick={handleClick}
         />
         <audio
@@ -294,7 +295,7 @@ export default function DesktopShell() {
           width={WINDOW_SIZES.faq.width}
           height={WINDOW_SIZES.faq.height}
         >
-          <p>This is FAQ section</p>
+          <FAQSection />
         </Window>
       )}
 

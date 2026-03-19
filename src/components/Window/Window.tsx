@@ -234,7 +234,7 @@ export default function Window({
       <div
         onMouseDownCapture={onActivate}
         onTouchStartCapture={onActivate}
-        className={`bg-window-bg border-2 border-window-border rounded-xl shadow-flat overflow-hidden h-full flex flex-col ${isMobile ? "transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]" : "transition-[opacity,transform] duration-200 ease-out"}
+        className={`bg-window-bg sm:border-2 sm:border-window-border rounded-xl shadow-flat overflow-hidden h-full flex flex-col ${isMobile ? "transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]" : "transition-[opacity,transform] duration-200 ease-out"}
         ${isMobile
             ? (animate ? "translate-y-0" : "translate-y-full")
             : (animate ? "scale-100 opacity-100" : "scale-90 opacity-0")
@@ -242,7 +242,7 @@ export default function Window({
 
         {/* header */}
         <div
-          className={`window-header text-white flex justify-between items-center bg-window-header px-6 py-2 rounded-t-[11px] border-b-2 border-window-border`}
+          className={`window-header text-white dark:text-background sm:dark:text-white font-medium flex justify-between items-center dark:bg-white bg-window-header sm:dark:bg-window-header sm:bg-window-header px-6 py-2 rounded-t-[11px] border-b-2 border-window-border`}
         >
           <span className="text-lg">{title}</span>
           <div className="flex items-center justify-center gap-2">
@@ -254,7 +254,7 @@ export default function Window({
                   className="window-action-btn hover:opacity-60 flex items-center justify-center hover:bg-slate-100/10 rounded-sm p-1.5 size-8"
                   aria-label={isMaximized ? "Restore window" : "Maximize window"}
                 >
-                  <PictureInPicture2 size={20} className="text-white" />
+                  <PictureInPicture2 size={20} className="" />
                 </button>
               </SoundHover>
             )}
@@ -266,9 +266,9 @@ export default function Window({
                 aria-label={isMobile ? "Collapse window" : "Close window"}
               >
                 {isMobile ? (
-                  <ChevronDown size={22} className="text-white" />
+                  <ChevronDown size={22} className="" />
                 ) : (
-                  <X size={20} className="text-white" />
+                  <X size={20} className="" />
                 )}
               </button>
             </SoundHover>
