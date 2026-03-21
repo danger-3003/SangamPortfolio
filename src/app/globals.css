@@ -79,6 +79,10 @@ body {
   overscroll-behavior: none;
 }
 
+.font-roboto {
+  font-family: var(--font-roboto), sans-serif;
+}
+
 button {
   cursor: pointer;
 }

@@ -41,7 +41,7 @@ export default function Work() {
       {/* Tools + Dev */}
       <div className="tools-dev-grid gap-4.5">
         <div>
-          <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-2">
+          <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-medium mb-2 font-roboto">
             TOOLS
           </h2>
 
@@ -77,7 +77,7 @@ export default function Work() {
         </div>
 
         <div>
-          <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-2">
+          <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-medium mb-2 font-roboto">
             DEVELOPMENT
           </h2>
 
@@ -117,7 +117,7 @@ export default function Work() {
       <div className="h-px bg-white/25 my-5" />
 
       {/* Behance Section */}
-      <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-2">
+      <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-medium mb-2 font-roboto">
         BEHANCE PROJECTS
       </h2>
 

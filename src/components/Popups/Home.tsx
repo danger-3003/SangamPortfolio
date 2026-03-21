@@ -50,7 +50,7 @@ function HomePopUp({ handleClick }: HomePopUp) {
   return (
     <>
       <div
-        className={`fixed left-[5vw] top-[20%] md:top-1/2 md:left-1/2 z-45 md:-translate-x-1/2 md:-translate-y-1/2 transition-all duration-200 ease-out`}
+        className={`fixed left-[5vw] top-1/2 -translate-y-1/2 md:left-1/2 z-45 md:-translate-x-1/2 transition-all duration-200 ease-out`}
       >
         <div className="absolute -top-20 md:-top-24 left-0 md:-left-5 group py-5 w-16 hover:-mt-6">
           <SoundHover playType="hover" src="assets/original/sounds/star.mp3" vol={0.5}>
@@ -67,7 +67,7 @@ function HomePopUp({ handleClick }: HomePopUp) {
             fun stuff
           </p>
         </div>
-        <div className="bg-window-bg w-[90vw] md:w-130 h-[50vh] max-h-240 md:h-[60vh] md:max-h-120 lg:w-180 xl:w-200 lg:h-150 border-2 border-window-border rounded-xl shadow-flat overflow-hidden flex flex-col">
+        <div className="bg-window-bg w-[90vw] md:w-130 h-[60vh] max-h-240 md:h-[60vh] md:max-h-120 lg:w-180 xl:w-200 lg:h-150 border-2 border-window-border rounded-xl shadow-flat overflow-hidden flex flex-col">
           <div
             className={`window-header text-white flex justify-between items-center bg-window-header px-6 py-2 rounded-t-[11px] border-b-2 border-window-border`}
           >
@@ -145,17 +145,17 @@ function HomePopUp({ handleClick }: HomePopUp) {
               >
                 <img
                   draggable={false}
-                  className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
+                  className="size-10 hover:size-11 duration-200 block dark:hidden"
                   src="/assets/original/images/icon_work.webp"
                 />
 
                 <img
                   draggable={false}
-                  className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
+                  className="size-10 hover:size-11 duration-200 hidden dark:block"
                   src="/assets/original/images/icon_work_dark.webp"
                 />
 
-                <div className="label">work</div>
+                <div className="font-roboto font-mono font-medium">work</div>
               </button>
             </SoundHover>
             <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
@@ -165,17 +165,17 @@ function HomePopUp({ handleClick }: HomePopUp) {
               >
                 <img
                   draggable={false}
-                  className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
+                  className="size-10 hover:size-11 duration-200 block dark:hidden"
                   src="/assets/original/images/icon_about.webp"
                 />
 
                 <img
                   draggable={false}
-                  className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
+                  className="size-10 hover:size-11 duration-200 hidden dark:block"
                   src="/assets/original/images/icon_about_dark.webp"
                 />
 
-                <div className="label">about</div>
+                <div className="font-roboto font-mono font-medium">about</div>
               </button>
             </SoundHover>
             <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
@@ -185,17 +185,17 @@ function HomePopUp({ handleClick }: HomePopUp) {
               >
                 <img
                   draggable={false}
-                  className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
+                  className="size-10 hover:size-11 duration-200 block dark:hidden"
                   src="/assets/original/images/icon_faq.webp"
                 />
 
                 <img
                   draggable={false}
-                  className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
+                  className="size-10 hover:size-11 duration-200 hidden dark:block"
                   src="/assets/original/images/icon_faq_dark.webp"
                 />
 
-                <div className="label">faq</div>
+                <div className="font-roboto font-mono font-medium">faq</div>
               </button>
             </SoundHover>
             <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
@@ -205,17 +205,17 @@ function HomePopUp({ handleClick }: HomePopUp) {
               >
                 <img
                   draggable={false}
-                  className="size-10 hover:size-11 img-drop-shadow duration-200 block dark:hidden"
+                  className="size-10 hover:size-11 duration-200 block dark:hidden"
                   src="/assets/original/images/icon_contact.webp"
                 />
 
                 <img
                   draggable={false}
-                  className="size-10 hover:size-11 img-drop-shadow duration-200 hidden dark:block"
+                  className="size-10 hover:size-11 duration-200 hidden dark:block"
                   src="/assets/original/images/icon_contact_dark.webp"
                 />
 
-                <div className="label">contact</div>
+                <div className="font-roboto font-mono font-medium">contact</div>
               </button>
             </SoundHover>
           </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Zen_Kaku_Gothic_New } from "next/font/google";
+import { Zen_Kaku_Gothic_New, Roboto } from "next/font/google";
 import "./globals.css";
 
 const gothic_new = Zen_Kaku_Gothic_New({
@@ -7,6 +7,12 @@ const gothic_new = Zen_Kaku_Gothic_New({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700", "900"],
 });
+
+const robot = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "900"],
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gothic_new.className} antialiased duration-300 transition-all`}
+        className={`${gothic_new.className} ${robot?.variable} antialiased duration-300 transition-all`}
       >
         {children}
       </body>
