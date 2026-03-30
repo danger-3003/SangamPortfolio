@@ -1,0 +1,33 @@
+name: "Check lint and build"
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint-and-typecheck:
+    runs-on: ubuntu@latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up node environemnt
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Enable corepack
+        run: |
+            corepack enable
+            corepack prepare pnpm@10.0.0 --activate
+            pnpm -v
+
+      - name: Install dependencies
+        run: exec pnpm install --frozen-lockfile --with-deps
+
+      - name: Run lint
+        run: exec pnpm lint
+
+      - name: Run build
+        run: exec pnpm build
