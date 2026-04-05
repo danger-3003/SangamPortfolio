@@ -136,37 +136,6 @@ export default function DesktopShell() {
         {/* FLOATING ICONS LEFT */}
         <div className="absolute left-6 top-24 flex flex-col gap-10">
 
-          {/* ABOUT */}
-          <Draggable
-            nodeRef={aboutRef}
-            onStart={handleDragStart}
-            onDrag={handleDrag}
-            onStop={handleDragStop}
-          >
-            <div ref={aboutRef}>
-              <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
-                <button
-                  className="hidden size-12 md:flex items-center justify-center flex-col"
-                  onClick={() => handleClick("about")}
-                >
-                  <img
-                    draggable={false}
-                    className="size-10 hover:size-11 duration-200 block dark:hidden"
-                    src="/assets/original/images/icon_about.webp"
-                  />
-
-                  <img
-                    draggable={false}
-                    className="size-10 hover:size-11 duration-200 hidden dark:block"
-                    src="/assets/original/images/icon_about_dark.webp"
-                  />
-
-                  <div className="label">about</div>
-                </button>
-              </SoundHover>
-            </div>
-          </Draggable>
-
           {/* WORK */}
           <Draggable
             nodeRef={workRef}
@@ -193,6 +162,68 @@ export default function DesktopShell() {
                   />
 
                   <div className="label">work</div>
+                </button>
+              </SoundHover>
+            </div>
+          </Draggable>
+
+          {/* CONTACT */}
+          <Draggable
+            nodeRef={contactRef}
+            onStart={handleDragStart}
+            onDrag={handleDrag}
+            onStop={handleDragStop}
+          >
+            <div ref={contactRef}>
+              <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
+                <button
+                  className="hidden size-12 md:flex items-center justify-center flex-col"
+                  onClick={() => handleClick("contact")}
+                >
+                  <img
+                    draggable={false}
+                    className="size-10 hover:size-11 duration-200 block dark:hidden"
+                    src="/assets/original/images/icon_contact.webp"
+                  />
+
+                  <img
+                    draggable={false}
+                    className="size-10 hover:size-11 duration-200 hidden dark:block"
+                    src="/assets/original/images/icon_contact_dark.webp"
+                  />
+
+                  <div className="label">contact</div>
+                </button>
+              </SoundHover>
+            </div>
+          </Draggable>
+
+          {/* ABOUT */}
+          <Draggable
+            nodeRef={aboutRef}
+            onStart={handleDragStart}
+            onDrag={handleDrag}
+            onStop={handleDragStop}
+          >
+            <div ref={aboutRef}>
+              <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
+                <button
+                  className="hidden size-12 md:flex items-center justify-center flex-col"
+                  onClick={() => handleClick("about")}
+                >
+                  <img
+                    draggable={false}
+                    className="size-10 hover:size-11 duration-200 block dark:hidden"
+                    src="/assets/original/images/icon_about.webp"
+                  />
+
+                  <img
+                    draggable={false}
+                    className="size-10 hover:size-11 duration-200 hidden dark:block"
+                    src="/assets/original/images/icon_about_dark.webp"
+                  />
+
+                  <div className="label">about</div>
                 </button>
               </SoundHover>
             </div>
@@ -229,36 +260,6 @@ export default function DesktopShell() {
             </div>
           </Draggable>
 
-          {/* CONTACT */}
-          <Draggable
-            nodeRef={contactRef}
-            onStart={handleDragStart}
-            onDrag={handleDrag}
-            onStop={handleDragStop}
-          >
-            <div ref={contactRef}>
-              <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
-                <button
-                  className="hidden size-12 md:flex items-center justify-center flex-col"
-                  onClick={() => handleClick("contact")}
-                >
-                  <img
-                    draggable={false}
-                    className="size-10 hover:size-11 duration-200 block dark:hidden"
-                    src="/assets/original/images/icon_contact.webp"
-                  />
-
-                  <img
-                    draggable={false}
-                    className="size-10 hover:size-11 duration-200 hidden dark:block"
-                    src="/assets/original/images/icon_contact_dark.webp"
-                  />
-
-                  <div className="label">contact</div>
-                </button>
-              </SoundHover>
-            </div>
-          </Draggable>
           <div
             className="fixed bottom-4 md:bottom-6 right-4 md:right-6 size-18 md:size-24 group"
             onClick={() => handlePlayBgm()}
@@ -280,6 +281,32 @@ export default function DesktopShell() {
 
       </main>
 
+      {openWindows.includes("work") && (
+        <Window
+          title="Work"
+          onClose={() => closeWindow("work")}
+          onActivate={() => focusWindow("work")}
+          child={getWindowIndex("work")}
+          width={windowSizes.work.width}
+          height={windowSizes.work.height}
+        >
+          <Work />
+        </Window>
+      )}
+
+      {openWindows.includes("contact") && (
+        <Window
+          title="Contact"
+          onClose={() => closeWindow("contact")}
+          onActivate={() => focusWindow("contact")}
+          child={getWindowIndex("contact")}
+          width={windowSizes.contact.width}
+          height={windowSizes.contact.height}
+        >
+          <Contact />
+        </Window>
+      )}
+
       {/* WINDOWS */}
       {openWindows.includes("about") && (
         <Window
@@ -294,19 +321,6 @@ export default function DesktopShell() {
         </Window>
       )}
 
-      {openWindows.includes("work") && (
-        <Window
-          title="Work"
-          onClose={() => closeWindow("work")}
-          onActivate={() => focusWindow("work")}
-          child={getWindowIndex("work")}
-          width={windowSizes.work.width}
-          height={windowSizes.work.height}
-        >
-          <Work />
-        </Window>
-      )}
-
       {openWindows.includes("faq") && (
         <Window
           title="FAQ's"
@@ -317,19 +331,6 @@ export default function DesktopShell() {
           height={windowSizes.faq.height}
         >
           <FAQSection />
-        </Window>
-      )}
-
-      {openWindows.includes("contact") && (
-        <Window
-          title="Contact"
-          onClose={() => closeWindow("contact")}
-          onActivate={() => focusWindow("contact")}
-          child={getWindowIndex("contact")}
-          width={windowSizes.contact.width}
-          height={windowSizes.contact.height}
-        >
-          <Contact />
         </Window>
       )}
     </>

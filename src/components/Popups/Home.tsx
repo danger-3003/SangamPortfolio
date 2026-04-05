@@ -76,7 +76,7 @@ function HomePopUp({ handleClick }: HomePopUp) {
           <div className='flex-1 min-h-0 overflow-y-auto scrollbar-hide'>
             <div className="p-6 flex flex-col gap-5">
               <div className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
-                hi! <span className='text-amber-500 dark:text-cyan-100 font-bold'>i&apos;m Sangam</span>
+                Hi! <span className='text-amber-500 dark:text-cyan-100 font-bold'>i&apos;m Sangam</span>
               </div>
               <div className='hidden lg:flex items-center justify-center'>
                 <div className='flex items-start flex-wrap lg:items-center justify-center w-max'>
@@ -170,6 +170,26 @@ function HomePopUp({ handleClick }: HomePopUp) {
             <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
               <button
                 className="size-12 flex items-center justify-center flex-col"
+                onClick={() => handleClick("contact")}
+              >
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 duration-200 block dark:hidden"
+                  src="/assets/original/images/icon_contact.webp"
+                />
+
+                <img
+                  draggable={false}
+                  className="size-10 hover:size-11 duration-200 hidden dark:block"
+                  src="/assets/original/images/icon_contact_dark.webp"
+                />
+
+                <div className="font-roboto font-mono font-medium">contact</div>
+              </button>
+            </SoundHover>
+            <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
+              <button
+                className="size-12 flex items-center justify-center flex-col"
                 onClick={() => handleClick("about")}
               >
                 <img
@@ -205,26 +225,6 @@ function HomePopUp({ handleClick }: HomePopUp) {
                 />
 
                 <div className="font-roboto font-mono font-medium">faq</div>
-              </button>
-            </SoundHover>
-            <SoundHover playType="click" src="/assets/original/sounds/click_general.mp3" vol={0.5}>
-              <button
-                className="size-12 flex items-center justify-center flex-col"
-                onClick={() => handleClick("contact")}
-              >
-                <img
-                  draggable={false}
-                  className="size-10 hover:size-11 duration-200 block dark:hidden"
-                  src="/assets/original/images/icon_contact.webp"
-                />
-
-                <img
-                  draggable={false}
-                  className="size-10 hover:size-11 duration-200 hidden dark:block"
-                  src="/assets/original/images/icon_contact_dark.webp"
-                />
-
-                <div className="font-roboto font-mono font-medium">contact</div>
               </button>
             </SoundHover>
           </div>
