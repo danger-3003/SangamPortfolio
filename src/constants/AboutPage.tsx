@@ -15,7 +15,7 @@ export const AboutPageData = {
   },
   "hobbies": {
     "title": "Hobbies:",
-    "description": "He cooks, occasionally well, plays the guitar, occasionally in tune, and is most commonly spotted in his natural habitat: a cafe, laptop open, pretending to work while actually overthinking ideas."
+    "description": "He cooks (occasionally well), plays the guitar (occasionally in tune), and is most commonly spotted in his natural habitat: a cafe, laptop open, pretending to work while actually overthinking ideas."
   },
   "review": {
     "title": "Genuine Reviews:",
