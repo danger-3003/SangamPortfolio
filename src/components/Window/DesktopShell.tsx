@@ -13,6 +13,7 @@ import { themeControls } from "@/store/theme-store"
 import Work from "../Popups/Work"
 import FAQSection from "../Popups/FAQ"
 import Contact from "../Popups/Contact"
+import MobileNotice from "../Popups/MobileNotice"
 
 export type WindowName = "about" | "work" | "faq" | "contact"
 type WindowSize = { width: number; height: number }
@@ -264,6 +265,14 @@ export default function DesktopShell() {
             className="fixed bottom-4 md:bottom-6 right-4 md:right-6 size-18 md:size-24 group"
             onClick={() => handlePlayBgm()}
           >
+            {!playBgm && (
+              <div className="absolute bottom-full right-0 mb-3 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none transition-[opacity,transform] duration-200 ease-out">
+                <div className="relative bg-window-bg border-2 border-window-border rounded-xl shadow-flat px-4 py-3 text-sm whitespace-nowrap">
+                  Click on frog to vibe...
+                  <div className="absolute -bottom-2.25 right-4 size-3.5 bg-window-bg border-r-2 border-b-2 border-window-border rotate-45" />
+                </div>
+              </div>
+            )}
             {playBgm ?
               <>
                 <img className="group-hover hover:cursor-pointer block dark:hidden duration-300" src="assets/original/images/player/froggert_play.webp" alt="froggert" />
@@ -320,6 +329,8 @@ export default function DesktopShell() {
           <About />
         </Window>
       )}
+
+      <MobileNotice hasOpenWindows={openWindows.length > 0} />
 
       {openWindows.includes("faq") && (
         <Window
