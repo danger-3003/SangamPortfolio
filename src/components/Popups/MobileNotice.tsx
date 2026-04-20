@@ -4,11 +4,10 @@ import { useState, useEffect } from "react"
 import SoundHover from "../PlaySound/HoverSound"
 
 export default function MobileNotice({ hasOpenWindows }: { hasOpenWindows: boolean }) {
-  const [dismissed, setDismissed] = useState(true)
+  const [dismissed, setDismissed] = useState(false)
   const [animate, setAnimate] = useState(false)
 
   useEffect(() => {
-    setDismissed(false)
     requestAnimationFrame(() => setAnimate(true))
   }, [])
 
